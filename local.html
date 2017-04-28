@@ -195,7 +195,7 @@
                                             +'<div class="inside">'
                                                 +'<i class="fa fa-plus"></i>'
                                                 +'<span class="date">'+production[i].date+'</span>'
-                                                +'<h4><a href="#">'+production[i].title+'</a></h4>'
+                                                +'<h4><a href="javascript:;">'+production[i].title+'</a></h4>'
                                                 +'<p>'+production[i].p+'</p>'
                                             +'</div>'
                                         +'</div>'
@@ -214,7 +214,7 @@
                 $(".post-thumb").click(function(){
                     //window.open($(this).children('img').attr("src"))
                     var obj = $(this).children('img'),
-                        src = obj.attr("src");
+                        src = obj.attr("src"),
                         //居中展示，难以计算!
                         img = new Image();
                         img.src = src;
