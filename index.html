@@ -56,7 +56,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-offset-2 col-md-8 text-center">
-                            <h2><span class="orange">李海鹏</span>的UI作品展示</h2>
+                            <h2><span class="orange">谭子舟</span>的UI作品展示</h2>
                             <p>我渴望随着命运指引的方向，心平气和地、没有争吵、悔恨、羡慕，笔直走完人生旅途。—— 魏尔伦</p>
                         </div>
                     </div>
@@ -109,7 +109,7 @@
             })
         </script>
         <script>
-        //生成引导页展示作品
+        /*//生成引导页展示作品
         var arrNum = [0,2,5,6,10,13],//要展示的作品,注意长度不能大于intro的长度
             images = [],
             showArray = [],
@@ -123,7 +123,21 @@
                 {intro: "设计师求我借给他面试的，我是好人", position: "right"},
                 {intro: "偷偷拿别人的作品丢上去的，撑面门", position: "right"},
                 {intro: "设计师呕心沥血的作品，天啊，这个水平是刚毕业出来的吗", position: "left"}
-            ], 
+            ], */
+        //展示组
+        var arrNum = [0,2,5,6,10,17],//要展示的作品,注意长度不能大于intro的长度
+            images = [],
+            showArray = [],
+            introArray = [],
+            showHtml = "",
+            intro  = [
+                {intro: "Icon Design,扁平化图标设计"},
+                {intro: "Icon Design,拟物化图标设计"},
+                {intro: "这...设计师的自画像，一个字：“非常帅”", position: "top"},
+                {intro: "Android 手机主题 - 极夏微光", position: "right"},
+                {intro: "高质感开关按钮图标制作", position: "right"},
+                {intro: "路在脚下", position: "left"}
+            ],     
         //作品组
             production = [
                 {title: "Icon Design", date: "2016.04.12", p: "扁平化图标设计", img: "images/11.jpg"},
