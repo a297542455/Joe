@@ -1,379 +1,505 @@
-﻿
-<!DOCTYPE HTML>
+﻿<!DOCTYPE HTML>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>我的动感超人</title>
-<link rel="stylesheet" href="css/keyframes.css">
-<script>
-	if(!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/) || !!navigator.userAgent.match(/AppleWebKit/)){
-		document.write('<link rel="stylesheet" href="css/webkit_keyframes.css" media="screen" />');
-	}
-</script>
-<link rel="stylesheet" href="css/checkBox.css">
-<link rel="stylesheet" href="css/style.css" media="screen" />
-<link rel="stylesheet" href="css/common.css"> 
-<style>
-body {
-	background: #fff;
-	margin: 0;
-	padding: 0;
-	font: 12px normal Verdana, Arial, Helvetica, sans-serif;
-	height: 100%;
-	width: 100%;
-	animation: myfirst 20s infinite;
-	-webkit-animation: myfirst 20s infinite;
-}
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>我的动感超人</title>
+	<link rel="stylesheet" href="css/keyframes.css">
+	<script>
+		if (!!navigator.userAgent.match(/AppleWebKit.*Mobile.*/) || !!navigator.userAgent.match(/AppleWebKit/)) {
+			document.write('<link rel="stylesheet" href="css/webkit_keyframes.css" media="screen" />');
+		}
+	</script>
+	<link rel="stylesheet" href="css/checkBox.css">
+	<link rel="stylesheet" href="css/style.css" media="screen" />
+	<link rel="stylesheet" href="css/common.css">
+	<style>
+		body {
+			background: #fff;
+			margin: 0;
+			padding: 0;
+			font: 12px normal Verdana, Arial, Helvetica, sans-serif;
+			height: 100%;
+			width: 100%;
+			animation: myfirst 20s infinite;
+			-webkit-animation: myfirst 20s infinite;
+		}
 
 
-@keyframes myfirst
-{
-0% {background: #333;}
-50% {background: white;}
-100% {background: #333;}
-}
+		@keyframes myfirst {
+			0% {
+				background: #333;
+			}
 
-@-webkit-keyframes myfirst
-{
-0% {background: #333;}
-50% {background: white;}
-100% {background: #333;}
-}
+			50% {
+				background: white;
+			}
 
+			100% {
+				background: #333;
+			}
+		}
 
-* {margin: 0; padding: 0; outline: none;}
+		@-webkit-keyframes myfirst {
+			0% {
+				background: #333;
+			}
 
-img {border: none;}
+			50% {
+				background: white;
+			}
 
-a { 
-	text-decoration:none; 
-	color:#00c6ff;
-}
-
-.bg-img1{
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	top:-100%;
-	background:url(images/001.jpg);
-}
-
-.bg-top,.bg-bottom{
-	width:100%;
-	height:50%;
-	background: #161616 url(images/004.png) top left repeat;
-	position: fixed;
-	top:0;
-	left:0;
-}
-.bg-bottom{
-	top:50%;
-	background: #161616 url(images/004.png) bottom right repeat;
-}
+			100% {
+				background: #333;
+			}
+		}
 
 
-/* Full Width Progress Bar */
+		* {
+			margin: 0;
+			padding: 0;
+			outline: none;
+		}
 
-#content { 
-	width:100%; 
-	height:5px; 
-	background: #fff top left repeat;
-	position: fixed;
-	top:50%;
-	margin-top:-2.5px;
-}
+		img {
+			border: none;
+		}
 
-.fullwidth .expand { 
-	width:100%; 
-	height:1px; 
-	margin:2px 0; 
-	background:#2187e7; 
-	position:absolute;
-	box-shadow:0px 0px 10px 1px rgba(0,198,255,0.7);
-	animation:fullexpand 10s ease-out;
-	-webkit-animation:fullexpand 10s ease-out;
-	-ms-animation:fullexpand 10s ease-out;
-}
+		a {
+			text-decoration: none;
+			color: #00c6ff;
+		}
 
-@keyframes fullexpand {
-	0%  { width:0%;}
-	100%{ width:100%;}	
-}
+		.bg-img1 {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: -100%;
+			background: url(images/001.jpg);
+		}
 
-@-webkit-keyframes fullexpand {
-	0%  { width:0%;}
-	100%{ width:100%;}	
-}
+		.bg-top,
+		.bg-bottom {
+			width: 100%;
+			height: 50%;
+			background: #161616 url(images/004.png) top left repeat;
+			position: fixed;
+			top: 0;
+			left: 0;
+		}
 
-@-ms-keyframes fullexpand {
-	0%  { width:0%;}
-	100%{ width:100%;}	
-}
-
-
-
-/* Trigger button for javascript */
-
-.triggerFull {
-	font-family: Verdana, Geneva, sans-serif;
-	font-size: 0.8em;
-	text-decoration: none;
-	text-transform: lowercase;
-	text-align: center;
-	border: 1px solid #FFE4BE;
-	padding: 20px;
-	border-radius: 3px;
-	display: block;
-	width: 140px;
-	position: fixed;
-	bottom: 140px;
-	left:50%;
-	margin-left:-90px;
-	z-index:99;
-}
-.triggerFull.a-txt{
-	top:30%;
-	left:63%;
-	bottom: auto;
-	border: none;
-	cursor: default;
-}
+		.bg-bottom {
+			top: 50%;
+			background: #161616 url(images/004.png) bottom right repeat;
+		}
 
 
+		/* Full Width Progress Bar */
 
-@media screen and (max-width:1400px){
-  .wrapper{
-    transform:scale(.7);
-  }
-  .music-text{
-    transform:scale(1.5);
-  }
-}
-		
-.human{
-	position: absolute;
-	top:50%;
-	left: 50%;
-	margin:-350px 0 0 -380px;
-	display:none;
-}
+		#content {
+			width: 100%;
+			height: 5px;
+			background: #fff top left repeat;
+			position: fixed;
+			top: 50%;
+			margin-top: -2.5px;
+		}
 
-.time{
-	position:fixed;
-	bottom:10%;
-	right:10%;
-	z-index:10;
-	border: 1px solid #FFE4BE;
-    padding: 20px;
-    cursor:pointer;
-}
+		.fullwidth .expand {
+			width: 100%;
+			height: 1px;
+			margin: 2px 0;
+			background: #2187e7;
+			position: absolute;
+			box-shadow: 0px 0px 10px 1px rgba(0, 198, 255, 0.7);
+			animation: fullexpand 10s ease-out;
+			-webkit-animation: fullexpand 10s ease-out;
+			-ms-animation: fullexpand 10s ease-out;
+		}
 
-.mt-back{width:100%; height:100%; position:fixed; top:0; left:0; z-index:9990; background:rgba(0,0,0,0.4); display:none;}		/*模态框背景*/
-.mt-big{			/*模态框整体内容*/
-	height:360px; width:60%; min-width:300px; border:1px solid yellowgreen; position:fixed; top:-500px; left:50%; margin-left:-30%; box-sizing:border-box; background:#fff; border-radius:4px;  z-index:9999;
-}
+		@keyframes fullexpand {
+			0% {
+				width: 0%;
+			}
 
-.mt-close{ height:20px; width:20px; font-size:24px; font-weight:900; text-shadow:0 1px 1px #999; color:#0095d9; position:absolute; top:20px; right:20px; text-align:center; line-height:20px; cursor:pointer; }		/*模态框关闭按钮*/
-.mt-close:hover{ color:yellowgreen;}
-.mt-content{ font-weight:700; color:#333; text-align:center; width:100%; position:absolute; top:50%; left:50%; margin-top:-20px; margin-left:-50%;}		/*模态框内容区*/
-.mt-bottom{ position:absolute; bottom:16px; text-align:center; width:100%; border-top:1px solid #eee; box-sizing:border-box; } 	/*模态框底部*/
-.mt-comfirm,.mt-cancel{display: inline-block; cursor: pointer; width: 95px; height: 35px; line-height: 35px; color: #FFFFFF; border-radius: 5px; margin-top: 16px; box-shadow:0 2px 2px #ccc;}
-.mt-comfirm{background-color: #0095d9; margin-right: 10px;}
-.mt-cancel{background-color: #546a79;}
-@media screen and (max-width: 320px) {
-	.mt-big{min-width:260px;}
-}
-@media screen and (max-width: 500px) {
-	.mt-big{height:240px;}
-}
+			100% {
+				width: 100%;
+			}
+		}
 
-</style>
-<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-<script>
-function runAlert(){
-	$("div").remove(".mt-back").remove(".mt-big");		//初始移除两个DIV
-	$("body").append("<div class='mt-back'></div><div class='mt-big'></div>")
-	$(".mt-back").show();
-	if($(".mt-big").width()>400){						//根据宽度判断弹出框的位置
-		$(".mt-big").stop().animate({top:200}, "swing");
-	}else{
-		$(".mt-big").stop().animate({top:60}, "swing");
-	}
-	$(".mt-big").append("<span class='mt-close'>×</span>").append("<div class='mt-content'></div>").append("<div class='mt-bottom'><div class='mt-comfirm'>是的，表哥</div><div class='mt-cancel'>我是撒比我不走</div></div>");
-	$(".mt-content").append('<div class="container"> <input type="checkbox" id="cbtest1" checked> <label for="cbtest1" class="check-box"></label><span class="check-text">靓仔</span> <input type="checkbox" id="cbtest2" checked> <label for="cbtest2" class="check-box"></label><span class="check-text">清秀</span> <input type="checkbox" id="cbtest3" checked> <label for="cbtest3" class="check-box"></label><span class="check-text">浪漫</span> <input type="checkbox" id="cbtest4" checked> <label for="cbtest4" class="check-box"></label><span class="check-text">迷人</span> <input type="checkbox" id="cbtest5"> <label for="cbtest5" class="check-box"></label><span class="check-text">逗比</span> </div>')
+		@-webkit-keyframes fullexpand {
+			0% {
+				width: 0%;
+			}
 
-	$(".mt-comfirm").click(function(e) {
-		$(".mt-back").slideUp();
-		$(".mt-big").stop().animate({top:-500},"swing");
-		window.location.href="../index.html"
-	})
-	
-	$(".mt-close,.mt-cancel").click(function(e) {
-		$(".mt-back").slideUp();
-		$(".mt-big").stop().animate({top:-500},"swing");
-	})
-}
-$(document).ready(function() {
-	var mytime = 10000;		//设置动画时间，并不包括载入的等待时间，载入时间设置:animation:fullexpand 10s ease-out;
-	var delayTime = 400;
-	/*$('.time').click(function() {			//偷懒没写
-		mytime = 100;
-		$(this).hide();
-		$('.fullwidth .expand').css({"animation":"fullexpand "+mytime*0.01+"s ease-out"})
-	});*/
-	$('.music-text').click(function(){
-		runAlert();
-	})
-	$('.triggerFull,.wrapper,.human').hide();
-	$('#content').addClass('fullwidth').delay(mytime).fadeOut('slow', function() {
-		$('.bg-top').animate({'top':"-50%"},delayTime+300);
-		$('.bg-bottom').animate({'top':"100%"},delayTime+300);
-		$('.human').delay(delayTime).fadeIn(delayTime, function() {
-			$('.time').hide();
-			$('.triggerFull').fadeIn();
-			$('.triggerFull.click').click(function(){
-				$('.triggerFull').fadeOut(delayTime, function() {
-					$('.wrapper').delay(delayTime*2).fadeIn(delayTime,function() {
-						$('.bg-img1').animate({'top':'0'},1000)
-						$('.music-text').delay(delayTime*10).animate({'bottom':'-150px','opacity':'1'},1000).delay(100).animate({'bottom':'-200px'},1000);
+			100% {
+				width: 100%;
+			}
+		}
+
+		@-ms-keyframes fullexpand {
+			0% {
+				width: 0%;
+			}
+
+			100% {
+				width: 100%;
+			}
+		}
+
+
+
+		/* Trigger button for javascript */
+
+		.triggerFull {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 0.8em;
+			text-decoration: none;
+			text-transform: lowercase;
+			text-align: center;
+			border: 1px solid #FFE4BE;
+			padding: 20px;
+			border-radius: 3px;
+			display: block;
+			width: 140px;
+			position: fixed;
+			bottom: 140px;
+			left: 50%;
+			margin-left: -90px;
+			z-index: 99;
+		}
+
+		.triggerFull.a-txt {
+			top: 30%;
+			left: 63%;
+			bottom: auto;
+			border: none;
+			cursor: default;
+		}
+
+
+
+		@media screen and (max-width:1400px) {
+			.wrapper {
+				transform: scale(.7);
+			}
+
+			.music-text {
+				transform: scale(1.5);
+			}
+		}
+
+		.human {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin: -350px 0 0 -380px;
+			display: none;
+		}
+
+		.time {
+			position: fixed;
+			bottom: 10%;
+			right: 10%;
+			z-index: 10;
+			border: 1px solid #FFE4BE;
+			padding: 20px;
+			cursor: pointer;
+		}
+
+		.mt-back {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 9990;
+			background: rgba(0, 0, 0, 0.4);
+			display: none;
+		}
+
+		/*模态框背景*/
+		.mt-big {
+			/*模态框整体内容*/
+			height: 360px;
+			width: 60%;
+			min-width: 300px;
+			border: 1px solid yellowgreen;
+			position: fixed;
+			top: -500px;
+			left: 50%;
+			margin-left: -30%;
+			box-sizing: border-box;
+			background: #fff;
+			border-radius: 4px;
+			z-index: 9999;
+		}
+
+		.mt-close {
+			height: 20px;
+			width: 20px;
+			font-size: 24px;
+			font-weight: 900;
+			text-shadow: 0 1px 1px #999;
+			color: #0095d9;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			text-align: center;
+			line-height: 20px;
+			cursor: pointer;
+		}
+
+		/*模态框关闭按钮*/
+		.mt-close:hover {
+			color: yellowgreen;
+		}
+
+		.mt-content {
+			font-weight: 700;
+			color: #333;
+			text-align: center;
+			width: 100%;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -20px;
+			margin-left: -50%;
+		}
+
+		/*模态框内容区*/
+		.mt-bottom {
+			position: absolute;
+			bottom: 16px;
+			text-align: center;
+			width: 100%;
+			border-top: 1px solid #eee;
+			box-sizing: border-box;
+		}
+
+		/*模态框底部*/
+		.mt-comfirm,
+		.mt-cancel {
+			display: inline-block;
+			cursor: pointer;
+			width: 95px;
+			height: 35px;
+			line-height: 35px;
+			color: #FFFFFF;
+			border-radius: 5px;
+			margin-top: 16px;
+			box-shadow: 0 2px 2px #ccc;
+		}
+
+		.mt-comfirm {
+			background-color: #0095d9;
+			margin-right: 10px;
+		}
+
+		.mt-cancel {
+			background-color: #546a79;
+		}
+
+		@media screen and (max-width: 320px) {
+			.mt-big {
+				min-width: 260px;
+			}
+		}
+
+		@media screen and (max-width: 500px) {
+			.mt-big {
+				height: 240px;
+			}
+		}
+	</style>
+	<script src="https://cdn.bootcdn.net/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>
+		function runAlert() {
+			$("div").remove(".mt-back").remove(".mt-big");		//初始移除两个DIV
+			$("body").append("<div class='mt-back'></div><div class='mt-big'></div>")
+			$(".mt-back").show();
+			if ($(".mt-big").width() > 400) {						//根据宽度判断弹出框的位置
+				$(".mt-big").stop().animate({ top: 200 }, "swing");
+			} else {
+				$(".mt-big").stop().animate({ top: 60 }, "swing");
+			}
+			$(".mt-big").append("<span class='mt-close'>×</span>").append("<div class='mt-content'></div>").append("<div class='mt-bottom'><div class='mt-comfirm'>是的，表哥</div><div class='mt-cancel'>我是撒比我不走</div></div>");
+			$(".mt-content").append('<div class="container"> <input type="checkbox" id="cbtest1" checked> <label for="cbtest1" class="check-box"></label><span class="check-text">靓仔</span> <input type="checkbox" id="cbtest2" checked> <label for="cbtest2" class="check-box"></label><span class="check-text">清秀</span> <input type="checkbox" id="cbtest3" checked> <label for="cbtest3" class="check-box"></label><span class="check-text">浪漫</span> <input type="checkbox" id="cbtest4" checked> <label for="cbtest4" class="check-box"></label><span class="check-text">迷人</span> <input type="checkbox" id="cbtest5"> <label for="cbtest5" class="check-box"></label><span class="check-text">逗比</span> </div>')
+
+			$(".mt-comfirm").click(function (e) {
+				$(".mt-back").slideUp();
+				$(".mt-big").stop().animate({ top: -500 }, "swing");
+				window.location.href = "../index.html"
+			})
+
+			$(".mt-close,.mt-cancel").click(function (e) {
+				$(".mt-back").slideUp();
+				$(".mt-big").stop().animate({ top: -500 }, "swing");
+			})
+		}
+		$(document).ready(function () {
+			var mytime = 10000;		//设置动画时间，并不包括载入的等待时间，载入时间设置:animation:fullexpand 10s ease-out;
+			var delayTime = 400;
+			/*$('.time').click(function() {			//偷懒没写
+				mytime = 100;
+				$(this).hide();
+				$('.fullwidth .expand').css({"animation":"fullexpand "+mytime*0.01+"s ease-out"})
+			});*/
+			$('.music-text').click(function () {
+				runAlert();
+			})
+			$('.triggerFull,.wrapper,.human').hide();
+			$('#content').addClass('fullwidth').delay(mytime).fadeOut('slow', function () {
+				$('.bg-top').animate({ 'top': "-50%" }, delayTime + 300);
+				$('.bg-bottom').animate({ 'top': "100%" }, delayTime + 300);
+				$('.human').delay(delayTime).fadeIn(delayTime, function () {
+					$('.time').hide();
+					$('.triggerFull').fadeIn();
+					$('.triggerFull.click').click(function () {
+						$('.triggerFull').fadeOut(delayTime, function () {
+							$('.wrapper').delay(delayTime * 2).fadeIn(delayTime, function () {
+								$('.bg-img1').animate({ 'top': '0' }, 1000)
+								$('.music-text').delay(delayTime * 10).animate({ 'bottom': '-150px', 'opacity': '1' }, 1000).delay(100).animate({ 'bottom': '-200px' }, 1000);
+							});
+						});
+						$('.human').animate({ 'left': '-300%' }, mytime, 'swing');
 					});
 				});
-				$('.human').animate({'left':'-300%'},mytime,'swing');
-			});
+			});;
 		});
-	});;
-});
 
-</script>
+	</script>
 </head>
+
 <body>
-<!-- <a class="time" herf="javascript:;">进入极限加速模式</a> <-->
-<div class="bg-img1"></div>
-<div class="bg-top"></div>
-<div class="bg-bottom"></div>
-<!-- FULL WIDTH -->
-<div id="content">
-<span class="expand"></span>
-</div>
-<!-- END FULL WIDTH -->
-<a class="triggerFull a-txt" href="#">太阳出来我就爬山坡</a>
-<a class="triggerFull click" href="#">爬到山顶了，我想唱歌</a>
+	<!-- <a class="time" herf="javascript:;">进入极限加速模式</a> <-->
+	<div class="bg-img1"></div>
+	<div class="bg-top"></div>
+	<div class="bg-bottom"></div>
+	<!-- FULL WIDTH -->
+	<div id="content">
+		<span class="expand"></span>
+	</div>
+	<!-- END FULL WIDTH -->
+	<a class="triggerFull a-txt" href="#">太阳出来我就爬山坡</a>
+	<a class="triggerFull click" href="#">爬到山顶了，我想唱歌</a>
 
-<div class="human">
-<div id="canvas">
-        <div class="sky">
-            <div class="cloud-1"></div>
-            <div class="cloud-2"></div>
-            <div class="cloud-3"></div>
-            <div class="cloud-4"></div>
-            <div class="cloud-5"></div>
-            <div class="cloud-6"></div>
-            <div class="cloud-7"></div>
-            <div class="cloud-8"></div>
-        </div>
-        <div class="horizon"></div>
-        <div class="ground">
-            <div class="sign-best"></div>
-            <div class="sign-no-js"></div>
-            <div class="sign-lots-of-divs"></div>
-            <div class="sign-all-css"></div>
-        </div>
-        <!-- skeleton and shadow -->
-        <div class="shadow"></div>
-        <div class="me">
+	<div class="human">
+		<div id="canvas">
+			<div class="sky">
+				<div class="cloud-1"></div>
+				<div class="cloud-2"></div>
+				<div class="cloud-3"></div>
+				<div class="cloud-4"></div>
+				<div class="cloud-5"></div>
+				<div class="cloud-6"></div>
+				<div class="cloud-7"></div>
+				<div class="cloud-8"></div>
+			</div>
+			<div class="horizon"></div>
+			<div class="ground">
+				<div class="sign-best"></div>
+				<div class="sign-no-js"></div>
+				<div class="sign-lots-of-divs"></div>
+				<div class="sign-all-css"></div>
+			</div>
+			<!-- skeleton and shadow -->
+			<div class="shadow"></div>
+			<div class="me">
 
-            <div class="torso">
-                <div class="left leg">
-                    <div class="left thigh">
-                        <div class="left shin">
-                            <div class="left foot">
-                                <div class="left toes"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- <!-- left leg -->
+				<div class="torso">
+					<div class="left leg">
+						<div class="left thigh">
+							<div class="left shin">
+								<div class="left foot">
+									<div class="left toes"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- left leg -->
 
-                <div class="right leg">
-                    <div class="right thigh">
-                        <div class="right shin">
-                            <div class="right foot">
-                                <div class="right toes"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- <!-- right leg -->
+					<div class="right leg">
+						<div class="right thigh">
+							<div class="right shin">
+								<div class="right foot">
+									<div class="right toes"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- right leg -->
 
-                <div class="left arm">
-                    <div class="left bicep">
-                        <div class="left forearm"></div>
-                    </div>
-                </div>
- <!-- left arm -->
+					<div class="left arm">
+						<div class="left bicep">
+							<div class="left forearm"></div>
+						</div>
+					</div>
+					<!-- left arm -->
 
-                <div class="right arm">
-                    <div class="right bicep">
-                        <div class="right forearm"></div>
-                    </div>
-                </div>
- <!-- right arm -->
+					<div class="right arm">
+						<div class="right bicep">
+							<div class="right forearm"></div>
+						</div>
+					</div>
+					<!-- right arm -->
 
-            </div>
- <!-- torso -->
-        </div>
- <!-- me -->
-    </div>
-<!-- human -->
-</div>
+				</div>
+				<!-- torso -->
+			</div>
+			<!-- me -->
+		</div>
+		<!-- human -->
+	</div>
 
-<!-- music -->
-<div style="text-align:center;clear:both;">
-</div>
-  <div class="wrapper">
-    <div class="border-circle" id="one"></div>
-    <div class="border-circle" id="two"></div>
-    <div class="background-circle">
-      <div class="triangle-light"></div>
-      <div class="body"></div>
-      <span class="shirt-text">I</span>
-      <span class="shirt-text">♥</span>
-      <span class="shirt-text">B</span>
-      <span class="shirt-text">I</span>
-      <span class="shirt-text">A</span>
-      <span class="shirt-text">O</span>
-      <span class="shirt-text">G</span>
-      <span class="shirt-text">E</span>
-      <div class="triangle-dark"></div>
-    </div>
-    <div class="head">
-      <div class="ear" id="left"></div>
-      <div class="ear" id="right"></div>
-      <div class="hair-main">
-        <div class="sideburn" id="left"></div>
-        <div class="sideburn" id="right"></div>
-        <div class="hair-top"></div>
-      </div>
-      <div class="face">
-        <div class="hair-bottom"></div>
-        <div class="nose"></div>
-        <div class="eye-shadow" id="left">
-          <div class="eyebrow"></div>
-          <div class="eye"></div>
-        </div>
-        <div class="eye-shadow" id="right">
-          <div class="eyebrow"></div>
-          <div class="eye"></div>
-        </div>
-        <div class="mouth"></div>
-        <div class="shadow-wrapper">
-          <div class="shadow"></div>
-        </div>
-      </div>
-    </div>
-    <span class="music-note" id="one">&#9835;</span>
-    <span class="music-note" id="two">&#9834;</span>
-    <a class="music-text" href="javascript:;">唱的太好听了，放我回地球吧</a>
-  </div>
+	<!-- music -->
+	<div style="text-align:center;clear:both;">
+	</div>
+	<div class="wrapper">
+		<div class="border-circle" id="one"></div>
+		<div class="border-circle" id="two"></div>
+		<div class="background-circle">
+			<div class="triangle-light"></div>
+			<div class="body"></div>
+			<span class="shirt-text">I</span>
+			<span class="shirt-text">♥</span>
+			<span class="shirt-text">B</span>
+			<span class="shirt-text">I</span>
+			<span class="shirt-text">A</span>
+			<span class="shirt-text">O</span>
+			<span class="shirt-text">G</span>
+			<span class="shirt-text">E</span>
+			<div class="triangle-dark"></div>
+		</div>
+		<div class="head">
+			<div class="ear" id="left"></div>
+			<div class="ear" id="right"></div>
+			<div class="hair-main">
+				<div class="sideburn" id="left"></div>
+				<div class="sideburn" id="right"></div>
+				<div class="hair-top"></div>
+			</div>
+			<div class="face">
+				<div class="hair-bottom"></div>
+				<div class="nose"></div>
+				<div class="eye-shadow" id="left">
+					<div class="eyebrow"></div>
+					<div class="eye"></div>
+				</div>
+				<div class="eye-shadow" id="right">
+					<div class="eyebrow"></div>
+					<div class="eye"></div>
+				</div>
+				<div class="mouth"></div>
+				<div class="shadow-wrapper">
+					<div class="shadow"></div>
+				</div>
+			</div>
+		</div>
+		<span class="music-note" id="one">&#9835;</span>
+		<span class="music-note" id="two">&#9834;</span>
+		<a class="music-text" href="javascript:;">唱的太好听了，放我回地球吧</a>
+	</div>
 </body>
+
 </html>
